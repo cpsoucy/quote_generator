@@ -1,0 +1,12 @@
+body {
+    background-color:rgb(117, 117, 117);
+}
+
+h1 {
+    color:aqua
+}
+
+button {
+    background-color: rgb(218, 170, 39);;
+    border-radius: 10%;
+}
