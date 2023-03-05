@@ -10,39 +10,45 @@
 
 <body>
   <main>
-
   <header>
       <h1>Quote Generator</h1>
   </header>
-
 
   <div class="article">
     <div class="main">
       <section> 
         <div class="main_box">
-          <blockquote id="blockquote">
+          <blockquote id="blockquote" style:--bs-black: #000;>
             <p>"Quote will be generated here..."</p>
             <p><cite id="author">-author name here</cite></p>
+            <script type="text/javascript">
+              function codeAddress() {
+                  getCat();
+              }
+              window.onload = codeAddress;
+              </script>
           </blockquote>
         </div>
       </section>
   
     <div class="random">
-      <p>Random &#8635</p>
+      <div class="random">
+        <button role="button" onclick="showOne()">Random &#8635</button>
+      </div>
     </div>
-
-    <button role="button" onclick="showOne()">Random</button>
   
       <details>
-        <summary>Pick quote genre:</summary>
-        <!-- <p>old</p> -->
-        <!-- <p>modern</p> -->
-        <!-- <p>short</p> -->
-        <!-- <p>long</p> -->
-        <option value="old">old</option>
-        <option value="modern">modern</option>
-        <option value="short">short</option>
-        <option value="long">long</option>
+        <select name="category" id="select">
+          <option value="old">old</option>
+          <option value="modern">modern</option>
+          <option value="short">short</option>
+          <option value="long">long</option>
+        </select>
+
+        <div class="drop_down">
+          <button role="button" onclick="getCat()">Get</button>
+        </div>
+
       </details>
     </div>
   </div>
