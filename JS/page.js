@@ -31,3 +31,8 @@ function getCat() {
       }
     });
   }
+
+  function codeAddress() {
+    getCat();
+}
+window.onload = codeAddress;

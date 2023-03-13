@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quote Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <link href="css\styles.css" rel="stylesheet">
 </head>
 
@@ -18,38 +19,36 @@
     <div class="main">
       <section> 
         <div class="main_box">
-          <blockquote id="blockquote" style:--bs-black: #000;>
+          <blockquote id="blockquote" >
             <p>"Quote will be generated here..."</p>
-            <p><cite id="author">-author name here</cite></p>
-            <script type="text/javascript">
-              function codeAddress() {
-                  getCat();
-              }
-              window.onload = codeAddress;
-              </script>
           </blockquote>
+          <p><cite id="author" class="author">-author name here</cite></p>
         </div>
       </section>
   
+      <section>
+        <details class="details">
+          <select name="category" id="select">
+            <option value="old">old</option>
+            <option value="modern">modern</option>
+            <option value="short">short</option>
+            <option value="long">long</option>
+          </select>
+  
+          <div class="drop_down">
+            <button role="button" onclick="getCat()">Get</button>
+          </div>
+  
+        </details>
+        </section>
+
     <div class="random">
       <div class="random">
         <button role="button" onclick="showOne()">Random &#8635</button>
       </div>
     </div>
   
-      <details>
-        <select name="category" id="select">
-          <option value="old">old</option>
-          <option value="modern">modern</option>
-          <option value="short">short</option>
-          <option value="long">long</option>
-        </select>
-
-        <div class="drop_down">
-          <button role="button" onclick="getCat()">Get</button>
-        </div>
-
-      </details>
+   
     </div>
   </div>
 
